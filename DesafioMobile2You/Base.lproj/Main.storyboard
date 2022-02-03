@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DesafioMobile2You" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="RMt-as-PQ2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="303" id="aDH-Oi-gVf"/>
+                                    <constraint firstAttribute="width" constant="414" id="ieY-9f-Dnr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De Volta Para o Futuro" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo9-VJ-PPr">
+                                <rect key="frame" x="5" y="308" width="245.66666666666666" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knb-r8-0eu">
+                                <rect key="frame" x="373.33333333333331" y="310.33333333333331" width="20.666666666666686" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" image="heart" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0H-3U-VHi">
+                                <rect key="frame" x="5" y="341.66666666666669" width="119" height="22"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" title=" 32.6K Likes" image="suit.heart.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Het-2m-nSk">
+                                <rect key="frame" x="151" y="341.66666666666669" width="61" height="22"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                <state key="normal" title="  8,9" image="binoculars" catalog="system"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="43z-KP-uPw">
+                                <rect key="frame" x="0.0" y="387" width="414" height="349"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="hWH-Y6-674">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hWH-Y6-674" id="HV7-3y-mhG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" systemColor="labelColor"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="43z-KP-uPw" firstAttribute="top" secondItem="J0H-3U-VHi" secondAttribute="bottom" constant="23.329999999999998" id="44O-WV-qgl"/>
+                            <constraint firstItem="knb-r8-0eu" firstAttribute="centerY" secondItem="eo9-VJ-PPr" secondAttribute="centerY" id="Cde-bL-WnV"/>
+                            <constraint firstAttribute="trailing" secondItem="RMt-as-PQ2" secondAttribute="trailing" id="DWS-ir-T0w"/>
+                            <constraint firstItem="43z-KP-uPw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Gs8-TS-vyN"/>
+                            <constraint firstItem="eo9-VJ-PPr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Tes-dn-8eg"/>
+                            <constraint firstItem="43z-KP-uPw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VrG-1R-KjN"/>
+                            <constraint firstItem="RMt-as-PQ2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zfg-QJ-feq"/>
+                            <constraint firstItem="J0H-3U-VHi" firstAttribute="top" secondItem="eo9-VJ-PPr" secondAttribute="bottom" constant="5" id="bAL-Ob-0AO"/>
+                            <constraint firstItem="J0H-3U-VHi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="bLB-vM-gSb"/>
+                            <constraint firstItem="Het-2m-nSk" firstAttribute="leading" secondItem="J0H-3U-VHi" secondAttribute="trailing" constant="27" id="dAk-Km-xNb"/>
+                            <constraint firstItem="RMt-as-PQ2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eV3-sv-6xT"/>
+                            <constraint firstItem="43z-KP-uPw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hLT-yA-uYL"/>
+                            <constraint firstItem="eo9-VJ-PPr" firstAttribute="top" secondItem="RMt-as-PQ2" secondAttribute="bottom" constant="5" id="hab-Er-0mO"/>
+                            <constraint firstItem="Het-2m-nSk" firstAttribute="centerY" secondItem="J0H-3U-VHi" secondAttribute="centerY" id="ukY-Qw-i06"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="knb-r8-0eu" secondAttribute="trailing" constant="20" id="z6H-bH-P85"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="130.43478260869566"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="binoculars" catalog="system" width="128" height="90"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="poster" width="1487" height="2165"/>
+        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

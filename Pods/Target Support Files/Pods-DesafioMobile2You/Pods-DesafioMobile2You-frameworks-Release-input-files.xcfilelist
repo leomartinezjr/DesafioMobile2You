@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-DesafioMobile2You/Pods-DesafioMobile2You-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
