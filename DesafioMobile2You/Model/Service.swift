@@ -18,9 +18,9 @@ public final class MovieApi:NSObject {
     
         AF.request(url).response { (response) in
         guard let data = response.data,
-              let response = try? JSONDecoder().decode(APIResponse.self, from: data) else {return}
-        let movie = Movie(response: response)
-        onComplete(movie)
+              let movieResponse = try? JSONDecoder().decode(Movie.self, from: data) else {return}
+        
+        onComplete(movieResponse)
         }
     }
     
@@ -47,12 +47,4 @@ public final class MovieApi:NSObject {
             }
         }
     }
-}
-
-struct APIResponse: Decodable {
-    
-    let backdrop_path: String
-    let original_title: String
-    let popularity: Double
-    let vote_average: Float
 }

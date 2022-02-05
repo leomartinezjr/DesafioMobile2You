@@ -17,27 +17,25 @@ class MovieViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let likeMessage = " Likes"
+    let viewMessage = " Views"
     
     var moviesList: [MovieList] = []
     
     
-    fileprivate func extractedFunc() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         MovieApi.loadSimilarMovies { (movie) in
             self.moviesList = movie.results
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        extractedFunc()
         
         MovieApi.loadMovie { (movie) in
             self.lbTitle.text = movie.original_title
-            self.lbLikes.setTitle(String(movie.popularity), for: .normal)
+            self.lbLikes.setTitle(String(movie.popularity) + self.likeMessage, for: .normal)
            
             if let url = URL(string: String(Constants.ImageURlFormat.baseImageURL + movie.backdrop_path)){
                 self.ivCover.kf.setImage(with: url)
