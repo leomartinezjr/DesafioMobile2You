@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3F1D132C-184B-4C08-BB70-82F8541DDDDB"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66252FF4-8F03-4F58-984A-748C88D72845"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DesafioMobile2You/Utils/Constants.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "HttpRequestURl"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "66252FF4-8F03-4F58-984A-748C88D72845 - 24b3bd3be192d17a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_16CF64762ACC5729F5CAA2CFC9DD89DE_func5"
+                  moduleName = "DesafioMobile2You"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luana.martinez/Documents/ios/DesafioMobile2You/DesafioMobile2You/Utils/Constants.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "66252FF4-8F03-4F58-984A-748C88D72845 - ca9e0c27686cc06e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DesafioMobile2You.Constants.HttpRequestURl.url.unsafeMutableAddressor : Swift.String"
+                  moduleName = "DesafioMobile2You"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luana.martinez/Documents/ios/DesafioMobile2You/DesafioMobile2You/Utils/Constants.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

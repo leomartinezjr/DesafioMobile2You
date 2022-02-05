@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/luana.martinez/Documents/ios/DesafioMobile2You/DesafioMobile2You/Model/Service.swift">
+   </FileRef>
+   <FileRef
       location = "group:DesafioMobile2You.xcodeproj">
    </FileRef>
    <FileRef
