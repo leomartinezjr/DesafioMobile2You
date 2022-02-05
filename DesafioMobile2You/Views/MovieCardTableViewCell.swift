@@ -8,25 +8,34 @@
 import UIKit
 
 class MovieCardTableViewCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var ivCoverCell: UIImageView!
     @IBOutlet weak var lbNameCell: UILabel!
     @IBOutlet weak var lbAnoCell: UILabel!
     @IBOutlet weak var lbGenreCell: UILabel!
     
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
+    func prepare(whith movie: MovieList) {
+        lbNameCell.text = movie.title
+        //lbAnoCell.text =
+        lbGenreCell.text = "1"
+        
+        
+        if let url = URL(string: String(Constants.ImageURlFormat.baseImageURL + movie.backdrop_path)){
+            self.ivCoverCell.kf.setImage(with: url)
+            
+        }else
+        {self.ivCoverCell.image = nil}
+    }
 }

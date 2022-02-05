@@ -52,5 +52,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73FE8CC4-989B-40BD-B6A2-80073E2F40BC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DesafioMobile2You/Model/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "loadSimilarMovies(onComplete:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "73FE8CC4-989B-40BD-B6A2-80073E2F40BC - 7f449b69ca1b9f5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static DesafioMobile2You.MovieApi.loadSimilarMovies(onComplete: (DesafioMobile2You.SimilarMovie) -&gt; ()) -&gt; ()"
+                  moduleName = "DesafioMobile2You"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luana.martinez/Documents/ios/DesafioMobile2You/DesafioMobile2You/Model/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "233">
+               </Location>
+               <Location
+                  uuid = "73FE8CC4-989B-40BD-B6A2-80073E2F40BC - f59a1e85793139af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data, Alamofire.AFError&gt;) -&gt; () in static DesafioMobile2You.MovieApi.loadSimilarMovies(onComplete: (DesafioMobile2You.SimilarMovie) -&gt; ()) -&gt; ()"
+                  moduleName = "DesafioMobile2You"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luana.martinez/Documents/ios/DesafioMobile2You/DesafioMobile2You/Model/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

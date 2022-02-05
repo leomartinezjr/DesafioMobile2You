@@ -20,7 +20,20 @@ struct Movie: Codable {
         original_title = response.original_title
         popularity = response.popularity
         vote_average = response.vote_average
-        
     }
-        
+}
+
+
+struct SimilarMovie: Codable {
+    
+    var results: [MovieList]
+}
+
+struct MovieList: Codable {
+    
+    var id: Int
+    var backdrop_path: String
+    var title: String
+    let genre_ids: [Int]
+    var release_date: String
 }
