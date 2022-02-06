@@ -9,5 +9,5 @@ import Foundation
 
 protocol MovieView: NSObjectProtocol {
     func fetchMovie(_ movie: Movie)
-//    func fetchSimilarMovie()
+    func fetchMovieSimilar (similarMovie: SimilarMovie)
 }

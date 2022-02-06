@@ -22,7 +22,7 @@ class MovieViewController: UIViewController {
     
     var moviesList: [MovieList] = []
     var movie: Movie?
-    let moviePresenter = MoviePresenter(repository: MovieRepository())
+    let moviePresenter = MoviePresenter(service: MovieService())
     
     
     override func viewDidLoad() {
@@ -30,13 +30,6 @@ class MovieViewController: UIViewController {
         
         moviePresenter.attachView(view: self)
         moviePresenter.loadMovie()
-        
-//        MovieRepository.loadSimilarMovies { (movie) in
-//            self.moviesList = movie.results
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//        }
     }
 }
 
@@ -57,10 +50,17 @@ extension MovieViewController: UITableViewDataSource{
 }
 
 extension MovieViewController: MovieView {
+    func fetchMovieSimilar(similarMovie: SimilarMovie) {
+        self.moviesList = similarMovie.results
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     func fetchMovie(_ movie: Movie) {
         self.lbTitle.text = movie.original_title
         self.lbLikes.setTitle(String(movie.popularity) + self.likeMessage, for: .normal)
-
         if let url = URL(string: String(Constants.ImageURlFormat.baseImageURL + movie.backdrop_path)){
             self.ivCover.kf.setImage(with: url)
         }

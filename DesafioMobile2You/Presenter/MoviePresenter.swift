@@ -9,11 +9,11 @@ import UIKit
 
 class MoviePresenter{
     
-    private let repository: MovieRepository
+    private let service: MovieService
     var movieView: MovieView?
     
-    init(repository: MovieRepository) {
-        self.repository = repository
+    init(service: MovieService) {
+        self.service = service
     }
     
     func attachView(view: MovieView) {
@@ -21,8 +21,12 @@ class MoviePresenter{
     }
     
     func loadMovie(){
-        repository.loadMovie { (movie) in
+        service.loadMovie { (movie) in
             self.movieView?.fetchMovie(movie)
+        }
+        
+        service.loadSimilarMovies { (similiarMovie) in
+            self.movieView?.fetchMovieSimilar(similarMovie: similiarMovie)
         }
     }
 }

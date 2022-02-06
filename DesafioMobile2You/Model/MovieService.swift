@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 
-public class MovieRepository {
+public class MovieService {
     
     func loadMovie( onComplete: @escaping (Movie)-> Void){
 
@@ -23,7 +23,7 @@ public class MovieRepository {
         }
     }
     
-    class func loadSimilarMovies(onComplete: @escaping (SimilarMovie)-> Void){
+    func loadSimilarMovies(onComplete: @escaping (SimilarMovie)-> Void){
         
         let url = Constants.HttpRequestURl.base + Constants.HttpRequestURl.similarMovir
         
