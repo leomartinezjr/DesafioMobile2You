@@ -29,4 +29,12 @@ class MoviePresenter{
             self.movieView?.fetchMovieSimilar(similarMovie: similiarMovie)
         }
     }
+    
+    func setFavorite(favorite: Bool){
+        if favorite {
+            self.movieView?.favoriteUncheked()
+        }else{
+            self.movieView?.favoriteCheked()
+        }
+    }
 }

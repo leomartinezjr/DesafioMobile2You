@@ -12,5 +12,6 @@ struct Movie: Codable {
     let backdrop_path: String
     let original_title: String
     let popularity: Double
-    let vote_average: Float
+    let vote_average: Double
+    let vote_count: Int
 }

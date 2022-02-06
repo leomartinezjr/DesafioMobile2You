@@ -12,17 +12,20 @@ class MovieViewController: UIViewController {
 
     @IBOutlet weak var ivCover: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
-    @IBOutlet weak var lbLikes: UIButton!
+    @IBOutlet weak var lbLikes: UILabel!
+    @IBOutlet weak var lbPopularity: UILabel!
+    @IBOutlet weak var btHeart: UIButton!
     
     
     @IBOutlet weak var tableView: UITableView!
     
     let likeMessage = " Likes"
-    let viewMessage = " Views"
+    let viewMessage = " Popularity"
     
     var moviesList: [MovieList] = []
     var movie: Movie?
     let moviePresenter = MoviePresenter(service: MovieService())
+    var favoriteStatus: Bool = false
     
     
     override func viewDidLoad() {
@@ -30,6 +33,10 @@ class MovieViewController: UIViewController {
         
         moviePresenter.attachView(view: self)
         moviePresenter.loadMovie()
+    }
+    
+    @IBAction func btHeart(_ sender: Any) {
+        moviePresenter.setFavorite(favorite: favoriteStatus)
     }
 }
 
@@ -50,6 +57,17 @@ extension MovieViewController: UITableViewDataSource{
 }
 
 extension MovieViewController: MovieView {
+    func favoriteCheked() {
+        self.favoriteStatus = true
+        btHeart.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+    }
+    
+    func favoriteUncheked() {
+        self.favoriteStatus = false
+        btHeart.setImage(UIImage(systemName: "heart"), for: .normal)
+    }
+    
+   
     func fetchMovieSimilar(similarMovie: SimilarMovie) {
         self.moviesList = similarMovie.results
         
@@ -59,8 +77,12 @@ extension MovieViewController: MovieView {
     }
     
     func fetchMovie(_ movie: Movie) {
+        
         self.lbTitle.text = movie.original_title
-        self.lbLikes.setTitle(String(movie.popularity) + self.likeMessage, for: .normal)
+        self.lbLikes.text = String(movie.vote_count) + likeMessage
+      
+        self.lbPopularity.text = String(movie.popularity) + viewMessage
+        
         if let url = URL(string: String(Constants.ImageURlFormat.baseImageURL + movie.backdrop_path)){
             self.ivCover.kf.setImage(with: url)
         }
