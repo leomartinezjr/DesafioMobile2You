@@ -21,26 +21,22 @@ class MovieViewController: UIViewController {
     let viewMessage = " Views"
     
     var moviesList: [MovieList] = []
+    var movie: Movie?
+    let moviePresenter = MoviePresenter(repository: MovieRepository())
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MovieApi.loadSimilarMovies { (movie) in
-            self.moviesList = movie.results
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
+        moviePresenter.attachView(view: self)
+        moviePresenter.loadMovie()
         
-        MovieApi.loadMovie { (movie) in
-            self.lbTitle.text = movie.original_title
-            self.lbLikes.setTitle(String(movie.popularity) + self.likeMessage, for: .normal)
-           
-            if let url = URL(string: String(Constants.ImageURlFormat.baseImageURL + movie.backdrop_path)){
-                self.ivCover.kf.setImage(with: url)
-            }else{self.ivCover.image = nil}
-        }
+//        MovieRepository.loadSimilarMovies { (movie) in
+//            self.moviesList = movie.results
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
     }
 }
 
@@ -58,4 +54,17 @@ extension MovieViewController: UITableViewDataSource{
         return cell
     }
     
+}
+
+extension MovieViewController: MovieView {
+    func fetchMovie(_ movie: Movie) {
+        self.lbTitle.text = movie.original_title
+        self.lbLikes.setTitle(String(movie.popularity) + self.likeMessage, for: .normal)
+
+        if let url = URL(string: String(Constants.ImageURlFormat.baseImageURL + movie.backdrop_path)){
+            self.ivCover.kf.setImage(with: url)
+        }
+        else
+        {self.ivCover.image = nil}
+    }
 }

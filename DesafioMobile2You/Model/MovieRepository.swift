@@ -9,18 +9,17 @@ import Foundation
 import Alamofire
 
 
-public final class MovieApi:NSObject {
+public class MovieRepository {
     
-    
-    class func loadMovie( onComplete: @escaping (Movie)-> Void){
+    func loadMovie( onComplete: @escaping (Movie)-> Void){
 
-    let url = Constants.HttpRequestURl.base + Constants.HttpRequestURl.detailsMovie
+        let url = Constants.HttpRequestURl.base + Constants.HttpRequestURl.detailsMovie
     
         AF.request(url).response { (response) in
         guard let data = response.data,
               let movieResponse = try? JSONDecoder().decode(Movie.self, from: data) else {return}
         
-        onComplete(movieResponse)
+            onComplete(movieResponse)
         }
     }
     
