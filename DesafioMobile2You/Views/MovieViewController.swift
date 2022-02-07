@@ -40,9 +40,6 @@ class MovieViewController: UIViewController {
     }
 }
 
-
-
-
 extension MovieViewController: UITableViewDataSource{
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,4 +93,3 @@ extension MovieViewController: MovieView {
 
     }
 }
-
