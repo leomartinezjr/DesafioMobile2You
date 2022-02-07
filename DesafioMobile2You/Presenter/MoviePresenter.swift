@@ -58,6 +58,7 @@ class MoviePresenter{
         }
     }
     
+    // Tratamento da Data
     private func dateFormatString(date: String)-> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -66,6 +67,7 @@ class MoviePresenter{
         let year = formatter.string(from: date!)
         return year
     }
+    
     
     private func genreResult(genreList: [Int])-> String {
         var result: String = ""

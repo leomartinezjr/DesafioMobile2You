@@ -84,10 +84,10 @@
 				953DB3AA27AC971A00CCF18C /* Model */,
 				953DB39E27AC837F00CCF18C /* Views */,
 				953DB3B327AD4B2200CCF18C /* Utils */,
-				9514673627ABFB4300B4207E /* SceneDelegate.swift */,
-				9514673D27ABFB4500B4207E /* Assets.xcassets */,
 				9514673A27ABFB4300B4207E /* Main.storyboard */,
 				9514673F27ABFB4500B4207E /* LaunchScreen.storyboard */,
+				9514673D27ABFB4500B4207E /* Assets.xcassets */,
+				9514673627ABFB4300B4207E /* SceneDelegate.swift */,
 				9514674227ABFB4500B4207E /* Info.plist */,
 			);
 			path = DesafioMobile2You;

@@ -16,10 +16,15 @@ public class MovieService {
         let url = Constants.HttpRequestURl.base + Constants.HttpRequestURl.detailsMovie
     
         AF.request(url).response { (response) in
+        switch response.result{
+        case.success(_):
         guard let data = response.data,
               let movieResponse = try? JSONDecoder().decode(Movie.self, from: data) else {return}
         
             onComplete(movieResponse)
+        case.failure(_):
+            print(response.response!.statusCode)
+            }
         }
     }
     

@@ -14,7 +14,7 @@ class Constants{
     
     struct HttpRequestURl {
         static let base: String = "https://api.themoviedb.org/3"
-        static let movieId: Int = 268
+        static let movieId: Int = 13 //Forrest Gump
         static let detailsMovie: String = "/movie/\(movieId)?api_key=\(apiKey)"
         static let similarMovir: String = "/movie/\(movieId)/similar?api_key=\(apiKey)"
         static let listGenre: String = "/genre/movie/list?api_key=\(apiKey)"
@@ -25,3 +25,6 @@ class Constants{
         
     }
 }
+
+
+

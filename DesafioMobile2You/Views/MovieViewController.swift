@@ -40,6 +40,9 @@ class MovieViewController: UIViewController {
     }
 }
 
+
+
+
 extension MovieViewController: UITableViewDataSource{
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,13 +85,15 @@ extension MovieViewController: MovieView {
         self.lbPopularity.text = String(movie.popularity) + viewMessage
         
         if let url = URL(string: String(Constants.ImageURlFormat.baseImageURL + movie.backdrop_path)){
+           
             self.ivCover.kf.setImage(with: url)
         }
         else
-        {self.ivCover.image = nil}
+        {self.ivCover.image = UIImage(named: "imageNoAvailable")}
     }
     
     func fetchGenreMovie(genreMovie: GenreMovie){
-        
+
     }
 }
+

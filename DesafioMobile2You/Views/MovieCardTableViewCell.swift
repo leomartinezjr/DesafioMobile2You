@@ -17,13 +17,13 @@ class MovieCardTableViewCell: UITableViewCell{
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
+       
     }
     
     func prepare(whith movie: MovieDetail) {
@@ -31,10 +31,11 @@ class MovieCardTableViewCell: UITableViewCell{
         lbAnoCell.text = movie.release_date
         lbGenreCell.text = movie.genres
         
+
         if let url = URL(string: String(Constants.ImageURlFormat.baseImageURL + movie.backdrop_path)){
             self.ivCoverCell.kf.setImage(with: url)
             
         }else
-        {self.ivCoverCell.image = nil}
+        {self.ivCoverCell.image = UIImage(systemName: "imageNoAvailable")}
     }
 }
