@@ -35,14 +35,26 @@ public class MovieService {
         
                 onComplete(response)
             case .failure(_):
-                switch response.response!.statusCode{
-                case 401: break
-                case 404:
-                    print("Nao existe o filme")
-                    break
-                default:
-                break
-                }
+                print(response.response!.statusCode)
+            }
+        }
+    }
+    
+    func loadGenreMovie(onComplete: @escaping (GenreMovie)-> Void){
+        
+        let url = Constants.HttpRequestURl.base + Constants.HttpRequestURl.listGenre
+        
+        AF.request(url).response{ (response) in
+            switch response.result{
+            case .success(_):
+                guard let json = response.data,
+                      let response = try? JSONDecoder().decode(GenreMovie.self, from: json) else {return  print("error json")}
+               
+        
+                onComplete(response)
+            case .failure(_):
+                print(response.response!.statusCode)
+              
             }
         }
     }

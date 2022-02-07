@@ -9,7 +9,9 @@ import Foundation
 
 protocol MovieView: NSObjectProtocol {
     func fetchMovie(_ movie: Movie)
-    func fetchMovieSimilar (similarMovie: SimilarMovie)
+    func fetchMovieSimilar (movieDetail: [MovieDetail])
     func favoriteCheked()
     func favoriteUncheked()
+    func fetchGenreMovie(genreMovie: GenreMovie)
+    
 }

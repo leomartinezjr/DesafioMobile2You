@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieCardTableViewCell: UITableViewCell {
+class MovieCardTableViewCell: UITableViewCell{
     
     
     @IBOutlet weak var ivCoverCell: UIImageView!
@@ -26,11 +26,10 @@ class MovieCardTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func prepare(whith movie: MovieList) {
+    func prepare(whith movie: MovieDetail) {
         lbNameCell.text = movie.title
-        //lbAnoCell.text =
-        lbGenreCell.text = "1"
-        
+        lbAnoCell.text = movie.release_date
+        lbGenreCell.text = movie.genres
         
         if let url = URL(string: String(Constants.ImageURlFormat.baseImageURL + movie.backdrop_path)){
             self.ivCoverCell.kf.setImage(with: url)

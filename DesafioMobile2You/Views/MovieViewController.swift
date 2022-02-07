@@ -22,7 +22,7 @@ class MovieViewController: UIViewController {
     let likeMessage = " Likes"
     let viewMessage = " Popularity"
     
-    var moviesList: [MovieList] = []
+    var movieDetail: [MovieDetail] = []
     var movie: Movie?
     let moviePresenter = MoviePresenter(service: MovieService())
     var favoriteStatus: Bool = false
@@ -43,17 +43,16 @@ class MovieViewController: UIViewController {
 extension MovieViewController: UITableViewDataSource{
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return moviesList.count
+        return movieDetail.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieCardTableViewCell
         
-        let movie = moviesList[indexPath.row]
+        let movie = movieDetail[indexPath.row]
         cell.prepare(whith: movie)
         return cell
     }
-    
 }
 
 extension MovieViewController: MovieView {
@@ -67,9 +66,8 @@ extension MovieViewController: MovieView {
         btHeart.setImage(UIImage(systemName: "heart"), for: .normal)
     }
     
-   
-    func fetchMovieSimilar(similarMovie: SimilarMovie) {
-        self.moviesList = similarMovie.results
+    func fetchMovieSimilar(movieDetail: [MovieDetail]) {
+        self.movieDetail = movieDetail
         
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -88,5 +86,9 @@ extension MovieViewController: MovieView {
         }
         else
         {self.ivCover.image = nil}
+    }
+    
+    func fetchGenreMovie(genreMovie: GenreMovie){
+        
     }
 }

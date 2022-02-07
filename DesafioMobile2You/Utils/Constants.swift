@@ -17,6 +17,7 @@ class Constants{
         static let movieId: Int = 268
         static let detailsMovie: String = "/movie/\(movieId)?api_key=\(apiKey)"
         static let similarMovir: String = "/movie/\(movieId)/similar?api_key=\(apiKey)"
+        static let listGenre: String = "/genre/movie/list?api_key=\(apiKey)"
         }
     
     struct ImageURlFormat {

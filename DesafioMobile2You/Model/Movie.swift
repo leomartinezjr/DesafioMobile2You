@@ -9,9 +9,9 @@ import Foundation
 
 struct Movie: Codable {
    
-    let backdrop_path: String
-    let original_title: String
-    let popularity: Double
-    let vote_average: Double
-    let vote_count: Int
+    var backdrop_path: String
+    var original_title: String
+    var popularity: Double
+    var vote_average: Double
+    var vote_count: Int
 }
